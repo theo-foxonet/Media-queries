@@ -1,0 +1,82 @@
+/****************************HEADER************************/
+header{
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgb(0 0 0/10%), 0px 12px 18px rgb(0 0 0/10%);
+}
+.header-mobile{
+    display: none;
+}
+nav{
+    gap: 10vw;
+    display: flex;
+    justify-content: center;
+}
+nav > div{
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+}
+
+nav div:hover .submenu{
+    display: inline-block;
+    z-index: 99999 !important;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    top: 10vh;
+}
+.submenu li{
+    padding: 20px;
+}
+.deroulant::after{
+    content: url(../img/flêche_developper_after.png);
+    padding-left: 5px;
+    vertical-align: -18%;
+}
+.deroulant{
+    padding-top: 5px;
+}
+.submenu ul{
+    list-style: none;
+    padding: 0;
+}
+/****************************FOOTER************************/
+footer{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/****************************MEDIA QUERIES***************************/
+@media screen and (max-width: 710px){
+    header{
+        height: 7vh;
+    }
+    .header-desktop{
+        display: none;
+    }
+    .header-mobile{
+        display: flex;
+    }
+    .header-mobile div a img{
+        width: 35px;
+    }
+    .submenu{
+        top: 7vh;
+    }
+    footer{
+        height: 7vh;
+    }
+    footer p{
+        font-size: 1.2rem;
+    }
+}
